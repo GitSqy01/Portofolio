@@ -1,4 +1,44 @@
+section{
+    padding-top: 128px;
+}
+.btn{
+    border: 3px solid black;
+    border-radius: 24px;
+}
+.btn:hover{
+    border: 3px solid black;
+    background-color: black;
+    color: white;
+}
 .navbar {
     background-color: white;
     box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.25);
+}
+.home h1{
+    font-size: 72px;
+}
+.home h3{
+    font-size: 48px;
+}
+.home .rifqi img{
+    width: 360px;
+    height: 280px;
+    border-radius:74px ;
+}
+.home .arrow img{
+    width: 60px;
+}
+#arrow{
+    animation:1s upDown infinite;
+}
+@keyframes upDown {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(24px);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
