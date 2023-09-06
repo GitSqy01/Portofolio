@@ -106,6 +106,22 @@ section::before{
 #arrow{
     animation:1s upDown infinite;
 }
+.contact{
+    padding-bottom: 128px;
+}
+.contact-img{
+    width: 100%;
+}
+.contact::before{
+    content: "Contact";
+}
+.contact-form{
+    border: 1px solid black;
+    padding: 64px 32px;
+}
+.form-label{
+    font-weight: 700;
+}
 @keyframes upDown {
     0%{
         transform: translateY(0);
