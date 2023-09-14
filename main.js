@@ -14,6 +14,8 @@ function toggleDetail(e){
     const detail = $(item).children(".about-exp-item-detail")
 
     $(detail).slideToggle()
+
+
 }
 
 function onFormSubmit(e){

@@ -32,62 +32,29 @@ section::before{
 .home h3{
     font-size: 48px;
 }
-.home .rifqi img{
-    width: 360px;
-    height: 280px;
+.home img{
+    width: 100%;
     border-radius:74px ;
 }
+
 .home .arrow img{
     width: 60px;
 }
 .work::before{
     content: "Work";
 }
-.work-img{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: "work-1 work-2" "work-3 work-3";
-    gap: 16px;
-}
-.work-img img{
-    width: 100%;
-}
-.work-img-item{
-    position: relative;
-}
-.work-img-item:hover:after{
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: beige;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;
-    font-size: 24px;
-}
-#work-1{
-    grid-area: work-1;
-}
-#work-1:hover::after{
-    content: "UNIVERSITAS BSI";
-}
-#work-2{
-    grid-area: work-2;
-}
-#work-2:hover::after{
-    content: "PT. Yamaha Motor Parts Mfg Indonesia";
-}
-#work-3{
-    grid-area: work-3;
-}
-#work-3:hover::after{
-    content: "PT. ASTRA DAIHATSU MOTOR";
-}
+
+.pop:hover{
+    border-top-color: var(--teal) !important;
+    transform: scale(1.03);
+    transition: all 0.3s;
+  }
+  .pop{
+    width: 400px;
+    margin-top: 20px;
+  }
+
+
 .about::before{
     content: "About";
 
@@ -111,6 +78,7 @@ section::before{
 }
 .contact-img{
     width: 100%;
+
 }
 .contact::before{
     content: "Contact";
@@ -118,6 +86,7 @@ section::before{
 .contact-form{
     border: 1px solid black;
     padding: 64px 32px;
+    margin-left: 34px;
 }
 .form-label{
     font-weight: 700;
@@ -131,5 +100,16 @@ section::before{
     }
     100%{
         transform: translateY(0);
+    }
+}
+@media only screen and (max-width: 768px) {
+    .home img{
+        width: 50%;
+    }
+}
+@media only screen and (max-width:576px) {
+    section::before{
+        left: -10px;
+        font-size: 64px;
     }
 }
