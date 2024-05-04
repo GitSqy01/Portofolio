@@ -110,7 +110,7 @@ section::before{
 @media only screen and (max-width:576px) {
     section::before{
         left: -10px;
-        font-size: 38px;
+        font-size: 54px;
     }
     /* @media only screen and (max-width:576px) {
         section::before{
