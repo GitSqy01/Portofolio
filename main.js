@@ -20,20 +20,26 @@ function toggleDetail(e){
 
 function onFormSubmit(e){
     e.preventDefault()
-    const email = $("#inp_email")
-    const subjek = $("#inp_subjek")
-    const message = $("#inp_message")
+    const email = $("#inp_email").val();
+    const subjek = $("#inp_subjek").val();
+    const message = $("#inp_message").val();
 
-    if(!$(email).val()){
-        alert("email is required")
-    }else if (!$(subjek).val()){
-        alert("subjek is required")
-    }else if(!$(message).val()){
-        alert("message is required")
-    }else{
-        alert("Form Submitted")
-        $(email).val("")
-        $(subjek).val("")
-        $(message).val("")
+    if (!email || !subjek || !message) {
+        alert("Semua kolom harus diisi");
+        return;
     }
+     // Buat elemen untuk menampilkan pesan
+     const pesanDiv = $("<div>").addClass("pesan-terkirim").html(`
+        <h2>Pesan Anda:</h2>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Subjek:</strong> ${subjek}</p>
+        <p><strong>Pesan:</strong> ${message}</p>
+    `);
+
+    // Tambahkan pesan ke halaman web
+    $("#pesan-area").after(pesanDiv); 
+
+    // Kosongkan formulir
+    $("#inp_email, #inp_subjek, #inp_message").val("");
 }
+

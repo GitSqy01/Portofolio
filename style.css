@@ -74,7 +74,7 @@ section::before{
     animation:1s upDown infinite;
 }
 .contact{
-    padding-bottom: 128px;
+    padding-bottom: 20px;
 }
 .contact-img{
     width: 100%;
@@ -117,4 +117,35 @@ section::before{
             left: -10px;
             font-size: 64px;
         } */
+}
+.comments_title
+{
+	font-family: 'Roboto Slab', serif;
+	font-size: 24px;
+	font-weight: 700;
+	color: #2c3145;
+}
+.comments_list li:not(:last-child) .comment_item
+{
+	border-bottom: solid 1px #e5e5e5;
+}
+.comment_item
+{
+	padding-top: 31px;
+	padding-bottom: 16px;
+}
+.comment_content
+{
+	width: 100%;
+	padding-left: 20px;
+	margin-top: -7px;
+}
+.pesan-terkirim {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+.message {
+    padding-top: 10px;
 }
